@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  tw-postgis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tw_postgis
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/data
